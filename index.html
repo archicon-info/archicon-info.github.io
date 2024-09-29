@@ -3,75 +3,140 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ARHICON</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Arhicon - Vrata i Prozori</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header>
-      <h1>ARHICON</h1>
+      <div class="container">
+        <h1>Arhicon</h1>
+        <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+        <nav>
+          <ul id="nav-menu">
+            <li><a href="#home">Početna</a></li>
+            <li><a href="#about">O Nama</a></li>
+            <li><a href="#services">Usluge</a></li>
+            <li><a href="#projects">Projekti</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
-    <main class="container">
-      <div class="text">
-        <h2>O nama</h2>
-        <p>Firma koja se bavi montažom prozora i vrata.</p>
-        <p>If you'd like to learn more about web development, you can visit</p>
+    <section id="home" class="hero-section">
+      <div class="container">
+        <h2>Vrata i Prozori Visoke Kvalitete</h2>
+        <p>Stručna rješenja za vaš dom i uredske prostore.</p>
+        <a href="#services" class="btn">Istražite Naše Usluge</a>
       </div>
-      <img
-        src="images\WhatsApp Slika 2024-09-29 u 16.31.59_ef458d8c.jpg"
-        alt="Image 1"
-      />
-      <img
-        src="images\WhatsApp Slika 2024-09-29 u 16.31.58_aff85513.jpg"
-        alt="Image 2"
-      />
-    </main>
+    </section>
 
-    <div class="image-container">
-      <img
-        src="images\WhatsApp Slika 2024-09-29 u 16.31.57_2e95af12.jpg"
-        alt="Image 1"
-      />
-    </div>
-    <div class="image-container">
-      <img
-        src="images\WhatsApp Slika 2024-09-29 u 16.31.57_66cbb3f9.jpg"
-        alt="Image 2"
-      />
-    </div>
-    <div class="image-container">
-      <img
-        src="images\WhatsApp Slika 2024-09-29 u 16.31.57_86cbe6ca.jpg"
-        alt="Image 3"
-      />
-    </div>
-    <div class="image-container">
-      <img
-        src="images\WhatsApp Slika 2024-09-29 u 16.31.57_04274459.jpg"
-        alt="Image 4"
-      />
-    </div>
-    <div class="image-container">
-      <img
-        src="images\WhatsApp Slika 2024-09-29 u 16.31.57_c68b33a0.jpg"
-        alt="Image 5"
-      />
-    </div>
-    <div class="image-container">
-      <img
-        src="images\WhatsApp Slika 2024-09-29 u 16.31.58_a439b6be.jpg"
-        alt="Image 6"
-      />
-    </div>
+    <section id="about">
+      <div class="container">
+        <h2>O Arhiconu</h2>
+        <p>
+          Arhicon je vodeći pružatelj visokokvalitetnih vrata i prozora, nudeći
+          širok raspon modernih i tradicionalnih dizajna. Naša misija je unijeti
+          ljepotu, sigurnost i funkcionalnost u svaki dom i ured.
+        </p>
+      </div>
+    </section>
 
-    <main>
-      <h2>KONTAKT</h2>
-      <p><b>MOB:</b> +385 91 326 4071</p>
-      <p><b>MAIL:</b> arhicon@gmail.com</p>
-    </main>
+    <section id="services">
+      <div class="container">
+        <h2>Naše Usluge</h2>
+        <div class="service">
+          <h3>Prilagođena Vrata</h3>
+          <p>
+            Projektiramo i postavljamo prilagođena vrata prema vašim potrebama i
+            stilskim preferencijama.
+          </p>
+        </div>
+        <div class="service">
+          <h3>Moderni Prozori</h3>
+          <p>
+            Naši moderni prozori pružaju energetsku učinkovitost, izdržljivost i
+            bezvremenski stil za svaki prostor.
+          </p>
+        </div>
+        <div class="service">
+          <h3>Instalacija i Održavanje</h3>
+          <p>
+            Pružamo profesionalne usluge instalacije i održavanja kako bismo
+            osigurali dugotrajne performanse.
+          </p>
+        </div>
+      </div>
+    </section>
 
-    <footer>
-      <p>&copy; 2024 ARHICON</p>
+    <section id="projects">
+      <div class="container">
+        <h2>Nedavni Projekti</h2>
+        <div class="projects-gallery">
+          <div class="project-item">
+            <img
+              src="images\WhatsApp Slika 2024-09-29 u 16.31.58_8fcc79b1.jpg"
+              alt="Projekt 1"
+            />
+            <h4>Luksuzna Drvena Vrata</h4>
+          </div>
+          <div class="project-item">
+            <img
+              src="images\WhatsApp Slika 2024-09-29 u 16.31.58_288360a1.jpg"
+              alt="Projekt 2"
+            />
+            <h4>Moderni Stakleni Prozori</h4>
+          </div>
+          <div class="project-item">
+            <img
+              src="images\WhatsApp Slika 2024-09-29 u 16.31.58_a439b6be.jpg"
+              alt="Projekt 3"
+            />
+            <h4>Čelična Sigurnosna Vrata</h4>
+          </div>
+          <div class="project-item">
+            <img
+              src="images\WhatsApp Slika 2024-09-29 u 16.31.58_b124bd17.jpg"
+              alt="Projekt 4"
+            />
+            <h4>Elegantna Vrtna Vrata</h4>
+          </div>
+          <div class="project-item">
+            <img
+              src="images\WhatsApp Slika 2024-09-29 u 16.31.58_c7e4b58d.jpg"
+              alt="Projekt 5"
+            />
+            <h4>Instalacija Uredskih Prozora</h4>
+          </div>
+          <div class="project-item">
+            <img
+              src="images\WhatsApp Slika 2024-09-29 u 16.31.59_ef458d8c.jpg"
+              alt="Projekt 6"
+            />
+            <h4>Vrata s Dvostrukim Staklom</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="contact">
+      <div class="container">
+        <h2>Kontaktirajte Nas</h2>
+        <p>Email: arhicon@gmail.com | Telefon: +385 91 326 4071</p>
+        <p>© 2024 Arhicon. Sva Prava Pridržana.</p>
+      </div>
     </footer>
+
+    <script>
+      function toggleMenu() {
+        const navMenu = document.getElementById("nav-menu");
+        navMenu.classList.toggle("active");
+      }
+    </script>
   </body>
 </html>

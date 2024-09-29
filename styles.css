@@ -1,0 +1,65 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+header {
+  background-color: #ffd700;
+  padding: 20px;
+  text-align: center;
+  color: black;
+  font-weight: bold;
+  font-size: 36px;
+}
+
+main {
+  margin: 20px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #ffd700;
+  color: black;
+  bottom: 0;
+  width: 100%;
+}
+
+.image-container {
+  display: flex; /* Use flexbox for layout */
+  display: inline;
+  justify-content: space-between; /* Equal spacing on the left and right edges */
+  flex-wrap: wrap; /* Allow items to wrap onto multiple lines if necessary */
+  padding: 0 20px; /* Left and right padding for the container */
+  gap: 20px; /* Gap between items */
+  max-width: 1200px; /* Maximum width of the container */
+  margin: 0 auto; /* Center the container horizontally */
+}
+
+.image-container img {
+  width: 200px; /* Fixed width for images */
+  height: 200px; /* Maintain aspect ratio */
+  transition: transform 0.3s ease; /* Smooth scale transition */
+}
+
+.image-container:hover img {
+  transform: scale(1.2); /* Scale up the images on hover */
+}
+
+.container {
+  display: flex;
+  align-items: top; /* Center vertically */
+  justify-content: space-between; /* Space between items */
+}
+.text {
+  flex: 1; /* Allow text to take available space */
+  padding-right: 20px; /* Space between text and image */
+}
+img {
+  width: 400px; /* Set a max width for the image */
+  height: 800px; /* Maintain aspect ratio */
+}

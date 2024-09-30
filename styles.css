@@ -24,6 +24,14 @@ img {
   padding: 20px;
 }
 
+a {
+  text-decoration: none;
+  color: #1a1a1a;
+  font-size: 17px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
 /* Header */
 header {
   background-color: #000000;
@@ -193,57 +201,102 @@ footer p {
   color: #ffffff;
 }
 
-.hamburger {
-  display: none;
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+:root {
+  --bar-width: 60px;
+  --bar-height: 8px;
+  --hamburger-gap: 6px;
+  --foreground: #d4af37;
+  --background: #1a1a1a;
+  --hamburger-margin: 40px;
+  --animation-timing: 200ms ease-in-out;
+  --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+}
+
+.hamburger-menu {
+  --x-width: calc(var(--hamburger-height) * 1.41421356237);
+  display: flex;
   flex-direction: column;
+  gap: var(--hamburger-gap);
+  width: max-content;
+  position: absolute;
+  top: var(--hamburger-margin);
+  right: var(--hamburger-margin);
+  z-index: 2;
   cursor: pointer;
 }
 
-.bar {
-  height: 3px;
-  width: 25px;
-  background-color: gold;
-  margin: 4px 0;
-  transition: 0.4s;
+.hamburger-menu::before,
+.hamburger-menu::after,
+.hamburger-menu input {
+  content: "";
+  width: var(--bar-width);
+  height: var(--bar-height);
+  background-color: var(--foreground);
+  transform-origin: left center;
+  border-radius: 9999px;
+  transition: opacity var(--animation-timing), width var(--animation-timing),
+    rotate var(--animation-timing), translate var(--animation-timing),
+    background-color var(--animation-timing);
 }
 
-nav {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-
-nav ul {
-  list-style: none;
+.hamburger-menu input {
+  appearance: none;
   padding: 0;
   margin: 0;
-  display: none; /* Hide menu by default */
+  outline: none;
+  pointer-events: none;
 }
 
-nav ul.active {
-  display: flex; /* Show menu when active */
-  flex-direction: column;
-  background-color: #121212; /* Background for the menu */
-  position: absolute;
-  top: 60px; /* Adjust as needed */
-  right: 10px; /* Adjust as needed */
-  border: 1px solid gold; /* Optional border */
-  z-index: 1000; /* Make sure it's on top */
+.hamburger-menu:has(input:checked)::before {
+  rotate: 45deg;
+  width: var(--x-width);
+  translate: 0 calc(var(--bar-height) / -2);
 }
 
-nav a {
-  color: gold; /* Menu text color */
-  text-decoration: none;
-  padding: 10px;
-  display: block; /* Make links block level */
+.hamburger-menu:has(input:checked)::after {
+  rotate: -45deg;
+  width: var(--x-width);
+  translate: 0 calc(var(--bar-height) / 2);
 }
 
-@media (max-width: 768px) {
-  .hamburger {
-    display: flex; /* Show hamburger icon on small screens */
-  }
+.hamburger-menu input:checked {
+  opacity: 0;
+  width: 0;
+}
 
-  nav ul {
-    flex-direction: column; /* Stack items vertically */
-  }
+.sidebar {
+  transition: translate var(--animation-timing);
+  translate: 900%;
+  padding: 0.5rem 1rem;
+  padding-top: calc(
+    var(--hamburger-height) + var(--hamburger-margin) +
+      var(--hamburger-margin + 0.5rem)
+  );
+  background-color: var(--foreground);
+  color: var(--background);
+  max-width: 10rem;
+  height: 20vh;
+  border-radius: 20%;
+  text-align: center;
+}
+
+.hamburger-menu.hamburger-menu:has(input:checked) + .sidebar {
+  translate: 740%;
+}
+
+.hamburger-menu:has(input:checked) {
+  --foreground: #d4af37;
+  --background: #1a1a1a;
+}
+
+.hamburger-menu:has(input:focus-visible)::before,
+.hamburger-menu:has(input:focus-visible)::after,
+.hamburger-menu input:focus-visible {
+  border: 1px solid var(--background);
+  box-shadow: 0 0 0 1px var(--foreground);
 }

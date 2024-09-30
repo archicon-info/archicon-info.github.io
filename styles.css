@@ -271,7 +271,7 @@ footer p {
 
 .sidebar {
   transition: translate var(--animation-timing);
-  translate: 900%;
+  translate: 100vw;
   padding: 0.5rem 1rem;
   padding-top: calc(
     var(--hamburger-height) + var(--hamburger-margin) +
@@ -286,7 +286,7 @@ footer p {
 }
 
 .hamburger-menu.hamburger-menu:has(input:checked) + .sidebar {
-  translate: 740%;
+  translate: 74vw;
 }
 
 .hamburger-menu:has(input:checked) {

@@ -220,9 +220,9 @@ footer p {
   font-weight: bold;
   letter-spacing: 5px;
   color: #d4af37;
-  background: linear-gradient(90deg, #b8860b, #ffd700, #b8860b);
-    -webkit-background-clip: text;
-    color: transparent;
+  background: -webkit-linear-gradient(90deg, #b8860b, #ffd700, #b8860b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .tagline {
@@ -230,9 +230,9 @@ footer p {
   letter-spacing: 2px;
   color: #d4af37;
   margin-top: -10px;
-  background: linear-gradient(90deg, #b8860b, #ffd700, #b8860b);
-    -webkit-background-clip: text;
-    color: transparent;
+  background: -webkit-linear-gradient(90deg, #b8860b, #ffd700, #b8860b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .subtext {

@@ -48,7 +48,7 @@ nav ul {
   background-color: #000000;
   width: 100%;
   list-style: none;
-  display: flex;
+  display: inline-block;
   justify-content: flex-end;
   padding-right: 5%;
 }

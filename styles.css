@@ -321,8 +321,10 @@ footer p {
   }
 
   nav ul {
+    display: inline-block;
     justify-content: center;
-    padding-right: 0;
+    padding-right: 2%;
+    padding-top: 5%;
   }
 
   nav ul li {
@@ -387,12 +389,12 @@ footer p {
 
   /* Logo and text content adjustments */
   .content-wrapper {
-    flex-direction: column;
+    display: flex;
     align-items: center;
   }
 
   .image-container {
-    margin-left: 0;
+    margin-left: 1%;
   }
 
   .responsive-image {

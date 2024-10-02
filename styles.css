@@ -59,7 +59,7 @@ nav ul {
     display: inline-block;
     width: auto; /* Adjust width if needed */
     padding-right: 0; /* Adjust padding for smaller screens */
-    text-align: left; /* Align text to the left if needed */
+    text-align: right; /* Align text to the left if needed */
   }
 }
 

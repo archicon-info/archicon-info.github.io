@@ -146,25 +146,25 @@ nav ul li a:hover {
 }
 
 /* Projects Section */
-#projects {
+#doors {
   background-color: #1a1a1a;
   padding: 50px 0;
   text-align: center;
 }
 
-#projects h2 {
+#doors h2 {
   color: #d4af37;
   font-size: 36px;
   margin-bottom: 30px;
 }
 
-.projects-gallery {
+.doors-gallery {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
-.project-item {
+.door-item {
   width: 30%;
   margin-bottom: 20px;
   background-color: #000000;
@@ -173,7 +173,7 @@ nav ul li a:hover {
   border-radius: 8px;
 }
 
-.project-item img {
+.door-item img {
   width: 100%;
   height: auto;
   display: block;
@@ -181,7 +181,48 @@ nav ul li a:hover {
   border-radius: 5px;
 }
 
-.project-item h4 {
+.door-item h4 {
+  color: #d4af37;
+  text-align: center;
+  font-size: 20px;
+}
+
+#windows {
+  background-color: #1a1a1a;
+  padding: 50px 0;
+  text-align: center;
+}
+
+#windows h2 {
+  color: #d4af37;
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+.windows-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.window-item {
+  width: 30%;
+  margin-bottom: 20px;
+  background-color: #000000;
+  padding: 10px;
+  border: 2px solid #d4af37;
+  border-radius: 8px;
+}
+
+.window-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.window-item h4 {
   color: #d4af37;
   text-align: center;
   font-size: 20px;
